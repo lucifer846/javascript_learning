@@ -11,4 +11,5 @@ a="line";b='same line';c='same line';
 /*this is
 a multiline shit 
 that wont be executed*/
+$abc='this is allowed',_69=69 // variables can start with $ or _ but not with number
 
