@@ -10,7 +10,7 @@ but in a block let redeclaration works*/
 
 
 const pi = 3.14; //defines a constant reference not a constant value 
-const array = ["shit", "some more", "little more"]
-console.log(array[0]) //a js array is like python list
-array.push("pushed shit")
-console.log(array) //we can change elements of a const array but not reassign it
+const object = {name:"raju", age:34, car:"maruti"} // this js obj looks like python dict??
+console.log(object.name) // but it doesn't work like python dict
+object.age = 12 // using const for object declaring but still can change properties of obj
+console.log(object)// but still can't reassgn this shit
