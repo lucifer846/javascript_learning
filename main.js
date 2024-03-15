@@ -7,4 +7,8 @@ let x, y, z;
 x = 'it'
 y = "some morehit"
 let a,b,c;
-a="line";b='same line';c='same line'
+a="line";b='same line';c='same line'; 
+/*this is
+a multiline shit 
+that wont be executed*/
+
