@@ -16,5 +16,7 @@ obj = {
         console.log(this.car+" is the car")
     }
 }
-obj.show()
+//obj.show()
 // there aer a lot of html events for which js can respond
+let text = 'abdc' // string in javascript is an object
+console.log(text.length) // length is string object property
