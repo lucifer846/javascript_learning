@@ -1,22 +1,23 @@
-// && is logical and operator
-// || is logical or operator
-// ! is logical not operator
-// ** is same as Math.pow(x,3) function
+// const req = require("./mouse")
+// console.log(req)
+// console.log
 
-function display(a, b) { // function naming is same as variable
-    return a*b
-}
 
-obj = {
-    age:23,
-    car:"maruti",
-    show: function() {
-        console.log("shown")
-        console.log(this.age+" is the age")
-        console.log(this.car+" is the car")
-    }
+cars = ["maruti", "suzuki", "toyota", "fortuner"]
+let text0 = "<ul>"
+for (let i = 0;i<cars.length;i++) {
+    text0 += "<li>"+cars[i]+"</li>"
 }
-//obj.show()
-// there aer a lot of html events for which js can respond
-let text = 'abdc' // string in javascript is an object
-console.log(text.length) // length is string object property
+text0+="</ul>"
+console.log(text0)
+
+
+let text = "<ul>"
+
+cars = ["maruti", "suzuki", "toyota", "fortuner"]
+cars.forEach((element) => { // forEach method instead of looping
+    text+="<li>"+element+"</li>"
+});
+text+="</ul>"
+console.log(text)
+
