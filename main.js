@@ -1,6 +1,6 @@
 // const req = require("./mouse")
 // console.log(req)
-// console.log
+// console.log      
 
 
 cars = ["maruti", "suzuki", "toyota", "fortuner"]
@@ -20,4 +20,8 @@ cars.forEach((element) => { // forEach method instead of looping
 });
 text+="</ul>"
 console.log(text)
+
+cars.forEach((i) => {
+    console.log(`print ${i}`)
+})
 
