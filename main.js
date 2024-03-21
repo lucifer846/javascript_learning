@@ -23,5 +23,5 @@ console.log(text)
 
 cars.forEach((i) => {
     console.log(`print ${i}`)
-})
+}) 
 
