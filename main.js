@@ -1,19 +1,12 @@
-/*const req = require("./mouse")
-console.log(req.car)
-const mouse = ["Banana", "language", "mango"]*/
 const fruits = ["Apple", "Orange", "Apple", "Mango"];
-//console.log(fruits.indexOf("Orange"))
 num = [16,4,29,9,25];
 
-let text = "";
+age = 17/"raju"
 
-num.forEach(element => { // forEach function takes three arguments(value,index,array)
-    text += element + "<br>"            //but here only one could be given
-});
-console.log(text)
-let new_num = num.map(f);
-
-function f(elmt) {
-    return elmt *2; 
+if (isNaN(age)) {
+    adult = "input is not a number"
 }
-console.log(new_num);
+else {
+    adult = (age>18)? "yes":"no";  // variable value based on condition
+}
+console.log(adult)
