@@ -4,3 +4,16 @@ div {
     background-color: antiquewhite;
     color: rgb(0, 0, 0);
 }
+
+.ques {
+    color:pink;
+    background-color: lightblue;
+
+}
+
+.newclass {
+    color:red;
+    background-color:aliceblue;
+    text-align: center;
+    size: 34px;
+}

@@ -35,10 +35,14 @@ car = new Car('white', 's-class', '2019')
 car.checkscore()*/
 
 let btn = document.createElement("button");
-btn.innerText = "click me bitch"
+btn.innerText = "click me now";
+btn.style.backgroundColor = "red";
+btn.style.color = "white"
+document.querySelector("body").prepend(btn);
+let para = document.querySelector(".ques").classList.add("newclass");
 
-document.querySelector("#endbutton").after(btn);
-document.querySelector("#endbutton").remove();
-btn.onclick = () => {
-    location = "https://www.google.com"
-}
+let trybtn = document.querySelector("#tryit");
+
+trybtn.addEventListener("mouseover", () => {
+    location = "https://www.google.com";
+});
