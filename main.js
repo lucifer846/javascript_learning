@@ -46,3 +46,60 @@ let trybtn = document.querySelector("#tryit");
 trybtn.addEventListener("mouseover", () => {
     location = "https://www.google.com";
 });
+
+const fruits = {
+    kind : "apple",
+    color : "red",
+    about : function() {
+        console.log(`"its kind is ${this.kind} and color is ${this.color}"`)
+    },
+    nalla() {
+        console.log("this is easier way to write methods")
+    }
+}
+
+class Employee {
+    constructor(name, age) {
+        this.name = name 
+        this.age = age
+        console.log(`"${this.name} created successfully"`)
+    }
+    start() {
+        console.log("start")
+    }
+
+    setExperience(experience) {
+        this.experience = experience
+    }
+
+    stop() {
+        console.log("stop")
+    }
+}
+
+
+new Employee("rakesh", 33)
+new Employee("saloni", 21)
+
+class Student {
+    constructor(name) {
+        this.name = name
+    }
+    getname() {
+        console.log(this.name)
+    }
+}
+
+class TenthStudents extends Student {
+    constructor(name, age) {
+        super(name);
+        this.age = age
+    }
+    percentage(percentage) {
+        console.log(`"the percentage is ${percentage} "`)
+    }
+}
+
+rajo = new TenthStudents("rajo", 23)
+rajo.getname()
+console.log(rajo.age)
