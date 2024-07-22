@@ -103,3 +103,26 @@ class TenthStudents extends Student {
 rajo = new TenthStudents("rajo", 23)
 rajo.getname()
 console.log(rajo.age)
+
+class User {
+    constructor(name, email) {
+        this.name = name;
+        this.email = email;
+    }
+    viewdata() {
+        console.log("website shit on your screen")
+    }
+}
+
+class Admin extends User {
+    constructor(name, email) {
+    }
+    editdata()  {
+        console.log("welcome to this editing shit, enjoy")
+    }
+}
+try {
+let naya = new Admin("saurabh", "test@gmail.com")
+} catch(err) {
+    console.log("error")
+}
