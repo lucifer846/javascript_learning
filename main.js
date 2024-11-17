@@ -10,16 +10,17 @@ function get_data(data_id) {
         setTimeout(() => {
 
         console.log("this is the data", data_id);
-        resolve()
+        resolve("this shit is resolved")
     }, (2000));
 }
 )}
 
-get_data(1).then((res)=>{
-    get_data(2).then(res)
-
-})
-
+get_data(1).then((res) => {
+        return get_data(2);
+    })
+    .then((res)=>{
+        console.log(res)
+    })
 // }
 // //callback hell
 // get_data(1, ()=>{
