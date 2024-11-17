@@ -4,22 +4,19 @@
 
 
 
-function get_data(data_id, getnextdata) {
+function get_data(data_id) {
     return new Promise((resolve,reject)=> {
+        console.log(`fetching data ...${data_id}`)
         setTimeout(() => {
+
         console.log("this is the data", data_id);
-        if (getnextdata) {
-            getnextdata();}
-        resolve("this is the data")
+        resolve()
     }, (2000));
 }
 )}
-console.log("fetching data 1...")
-let prom1 = get_data(123)
-prom1.then((res)=>{
-    console.log("fetching data 2...")
-    let prom2 = get_data(535)
-    prom2.then(res)
+
+get_data(1).then((res)=>{
+    get_data(2).then(res)
 
 })
 
