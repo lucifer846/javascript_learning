@@ -3,15 +3,14 @@
 // })
 
 
-async function get_all_data(){
+(async function(){
     await get_data(1)
     await get_data(2)
     await get_data(3)
     await get_data(4)
     await get_data(5)
-}
+})();
 
-get_all_data()
 
 function get_data(data_id) {
     return new Promise((resolve,reject)=> {
