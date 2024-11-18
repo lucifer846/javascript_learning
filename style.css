@@ -1,19 +1,47 @@
-div {
-    height: 79px;
-    width: 98px;
-    background-color: antiquewhite;
-    color: rgb(0, 0, 0);
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.ques {
-    color:pink;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     background-color: lightblue;
-
 }
 
-.newclass {
-    color:red;
-    background-color:aliceblue;
-    text-align: center;
-    size: 34px;
+.container {
+    background-color: lightpink;
+    padding: 2rem;
+    border-radius: 1rem;
+    min-width: 40vh;
+    min-height: 40vh;
+}
+
+form {
+    margin: 3rem 0 2rem 0;
+}
+
+form select,button,input {
+    width: 100%;
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+.select-container img{
+    max-width: 2rem;
+}
+
+form button {
+    height: 3rem;
+    border-radius: 1rem;
+    background-color: purple;
+    color: white;
+    border: none;
 }
