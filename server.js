@@ -3,7 +3,16 @@ const fs = require('fs')
 const _ = require('lodash')
 
 const server = http.createServer((req, res)=>{
-    console.log(req.url, req.method);
+
+    const num = _.random(0, 20)
+    console.log(num)
+
+    const greet = _.once(()=>{
+        console.log('hello')
+    })
+
+    greet()
+    greet()
     res.setHeader('Content-Type',  'text/html');
     path = './htmls/'
     switch(req.url){
@@ -26,7 +35,6 @@ const server = http.createServer((req, res)=>{
             break
     }
     html = fs.readFile(path, (err, data)=>{
-        console.log(data)
         res.end(data)
     
 });    })
