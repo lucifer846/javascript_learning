@@ -1,18 +1,19 @@
 const express = require('express')
 const app = express()
 
+
+app.set('view engine', 'ejs');
+
 app.get('/', (req, res)=>{
-    res.sendFile(`${__dirname}/htmls/index.html`)
+    res.render('index');
 })
 app.get('/about', (req,res)=>{
-    res.sendFile(`${__dirname}/htmls/about.html`)
+    res.render("about")
 })
-app.get('/about-us', (req,res)=>{
-    res.redirect("/about")
-})
+
 app.use((req, res)=>{
     res.statusCode = 404;
-    res.sendFile(`${__dirname}/htmls/404.html`)
+    res.render("404")
 })
 
 
