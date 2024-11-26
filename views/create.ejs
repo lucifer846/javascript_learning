@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <%- include("./partials/nav.ejs") %>
+        <div class="container">
+            <h2 class="blog-heading">Blog Title</h2>
+            <form method="POST" action="/blogs">
+                <input name ="title" type="text" id="title" required>
+                <div class="mb-3">
+                    <textarea name="text" class="blog-textarea" id="exampleFormControlTextarea1" rows="20"
+                        placeholder="Your Blog Here"></textarea>
+                </div>
+                <button class="blog-submit">Submit</button>
+            </form>
+            <div class="footer-text"><%- include('./partials/footer.ejs') %></div>
+        </div>
+</body>
+
+</html>
