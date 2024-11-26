@@ -44,23 +44,31 @@ app.post('/blogs',(req,res)=>{
         }).catch((err)=>{console.log(err)})
 })
 
+app.get('/blogs/:id', (req,res)=>{
+    const id = req.params.id
+    Blog.findbyId(id)
+        .then((result)=>{
+            res.render('details', {blog:result, title:"Blog Details"})
+        })
+})
+
+app.get('/blogs',(req,res)=>{
+    Blog.find().sort({createdAt : -1})
+    .then((result)=>{
+        res.render('index', {title:"All-Blogs",blogs:result})  
+    })
+    
+})
+app.get('/blogs/create', (req, res)=>{
+    res.render('create', {title:"Create"})
+})
+
 app.get('/', (req, res)=>{
     res.redirect("/blogs") 
 })
 app.get('/about', (req,res)=>{
     res.render("about", {title: "About"})
 })
-app.get('/blogs',(req,res)=>{
-    Blog.find().sort({createdAt : -1})
-        .then((result)=>{
-            res.render('index', {title:"All-Blogs",blogs:result})  
-        })
-
-})
-app.get('/blogs/create', (req, res)=>{
-    res.render('create', {title:"Create"})
-})
-
 app.use((req, res)=>{
     res.statusCode = 404;
     res.render("404", {title:"404"})

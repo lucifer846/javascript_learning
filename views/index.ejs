@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <title>HomePage</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
 
 
 <body>
@@ -12,8 +16,11 @@
     <div class="blogs-content">
         <h1>All Blogs</h1>
         <%blogs.forEach(blog=>{%>
-            <h3 class="title"><%= blog.title %></h3>
-            <p class="text"><%= blog.text %></p>
+            <a class="single-blog-link" href="/blogs/<%= blog._id %>">
+                <h2 class="title"><%= blog.title %></h2>
+            </a>
+                <p class="text"><%= blog.text %></p>
+            
         <%})%>
     </div>
 
