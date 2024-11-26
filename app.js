@@ -3,7 +3,9 @@ const app = express()
 const morgan = require('morgan')
 const mongoose = require('mongoose')
 const { result } = require('lodash')
-const Blog = require('./models/blog')
+
+const blogRoutes = require('./routes/blogRoutes')
+
 
 const dbURI = "mongodb+srv://Saurabh:ConorMcgregor@nodejscluster.ns38w.mongodb.net/LocalNode?retryWrites=true&w=majority&appName=NodejsCluster"
 mongoose.connect(dbURI)
@@ -34,40 +36,16 @@ app.use(express.static('public'))
 // })
 
 
-app.post('/blogs',(req,res)=>{
-    // console.log(req.body)
-    const blog = new Blog(req.body)
-
-    blog.save()
-        .then((result)=>{
-            res.redirect('/blogs')
-        }).catch((err)=>{console.log(err)})
-})
-
-app.get('/blogs/:id', (req,res)=>{
-    const id = req.params.id
-    Blog.findbyId(id)
-        .then((result)=>{
-            res.render('details', {blog:result, title:"Blog Details"})
-        })
-})
-
-app.get('/blogs',(req,res)=>{
-    Blog.find().sort({createdAt : -1})
-    .then((result)=>{
-        res.render('index', {title:"All-Blogs",blogs:result})  
-    })
-    
-})
-app.get('/blogs/create', (req, res)=>{
-    res.render('create', {title:"Create"})
-})
-
 app.get('/', (req, res)=>{
     res.redirect("/blogs") 
 })
 app.get('/about', (req,res)=>{
     res.render("about", {title: "About"})
+
+
+app.use(blogRoutes)
+
+
 })
 app.use((req, res)=>{
     res.statusCode = 404;
